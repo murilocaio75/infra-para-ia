@@ -37,6 +37,10 @@ def raiz():
     """Verificação de saúde: útil para saber se o container está no ar."""
     return {"status": "ok", "servico": "api-de-sentimento", "aula": 1}
 
+@app.get("/sobre")
+def sobre():
+    """Identifica o autor desta imagem (atividade avaliativa)."""
+    return {"aluno": "Caio Murilo de Castro", "github": "murilocaio75", "aula": 1}
 
 @app.post("/prediz", response_model=Saida)
 def prediz(entrada: Entrada):
