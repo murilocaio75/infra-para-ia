@@ -42,3 +42,15 @@ variable "memoria" {
   type        = number
   default     = 1
 }
+
+variable "node_vm_size" {
+  description = "Tamanho da VM do nó do AKS. A atividade pede Standard_D2as_v7; esta assinatura só tem cota da família B2s_v2 em chilecentral."
+  type        = string
+  default     = "Standard_B2s_v2"
+}
+
+variable "node_count" {
+  description = "Quantidade de nós do node pool padrão do AKS."
+  type        = number
+  default     = 1
+}
